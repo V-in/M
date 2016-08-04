@@ -2,17 +2,25 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on 
 
-let g:NERDTreeWinPos = "right"
+let g:NERDTreeWinPos="right"
 set splitright
-colo peaksea
+colo brighton
 set number
 set ruler 
 set cursorline
-set smarttab
 set si
+set smarttab
 
+
+
+set tabstop=4
+set shiftwidth=2
 set shiftround
 set expandtab
+set tabstop=4
+set softtabstop=4
+
+set shiftround
 set showmatch 
 
 set statusline+=%#warningmsg#
@@ -26,5 +34,3 @@ let g:syntastic_check_on_wq = 0
 
 map <space> /
 map <c-sapce> ?
-map <c-q> NERDTree
-
