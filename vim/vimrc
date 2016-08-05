@@ -2,6 +2,10 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on 
 
+set nowrap
+set wildmenu
+set wildmode=list:longest 
+
 let g:NERDTreeWinPos="right"
 set splitright
 colo brighton
@@ -12,13 +16,13 @@ set si
 set smarttab
 
 
-
+set gcr=a:blinkon0 "disable blink
+set nojoinspaces    
 set tabstop=4
-set shiftwidth=2
-set shiftround
-set expandtab
-set tabstop=4
+set shiftwidth=4
 set softtabstop=4
+set shiftround
+set tabstop=4
 
 set shiftround
 set showmatch 
@@ -32,5 +36,5 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-map <space> /
+map <space> : 
 map <c-sapce> ?
