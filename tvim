@@ -1,0 +1,17 @@
+#!/bin/bash
+CPPFILE=`find . | grep "$1.cpp"`
+HEADER=`find . | grep "$1.h"`
+SESSION=${USER}
+
+tmux -2 new-session -d -s ${USER}
+tmux split-window  
+tmux resize-pane -D 20
+tmux select-pane -t 0
+tmux send-keys "vim ${CPPFILE}" KPEnter
+tmux split-window -h
+tmux send-keys "vim ${HEADER}" KPEnter
+
+ 
+
+tmux -2 attach-session -t ${SESSION}
+
